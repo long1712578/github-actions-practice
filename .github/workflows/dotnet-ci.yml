@@ -22,11 +22,11 @@ jobs:
 
         - name: Restore dependencies
           run: dotnet restore
-          work-directory: GithubActionsPractice
+          working-directory: GithubActionsPractice
 
         - name: Build
           run: dotnet build --no-restore
-          work-directory: GithubActionsPractice
+          working-directory: GithubActionsPractice
         - name: Run Tests
           run: dotnet test --no-build --verbosity normal
-          work-directory: GithubActionsPractice
+          working-directory: GithubActionsPractice
