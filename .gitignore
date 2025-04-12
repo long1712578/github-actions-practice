@@ -1,7 +1,50 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Ignore build outputs
+bin/
+obj/
 
-*.vsidx
-/.vs/slnx.sqlite
-/.vs/slnx.sqlite-journal
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code folder
+.vscode/
+
+# Visual Studio working folder
+.vs/
+
+# Rider folder
+.idea/
+
+# Dotnet artifacts
+*.db
+*.db-shm
+*.db-wal
+
+# Backup & temp
+*.log
+*.tmp
+*.bak
+
+# System files
+Thumbs.db
+Desktop.ini
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+
+# Ignore test result
+TestResult/
+
+# Ignore publish folder
+publish/
+
+# Ignore coverage reports
+coverage/
+coverage*.json
+lcov*
+
+# Others
+*.swp
