@@ -30,3 +30,6 @@ jobs:
         - name: Run Tests
           run: dotnet test --no-build --verbosity normal
           working-directory: GithubActionsPractice
+        - name: Publish
+          run: dotnet publish -c Release -o publish
+          working-directory: GithubActionsPractice
