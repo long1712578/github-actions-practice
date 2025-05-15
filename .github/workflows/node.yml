@@ -24,3 +24,14 @@ jobs:
 
     - name: Run build
       run: npm run build
+
+    - name: Run tests
+      run: |
+      mkdir -p reports
+      pytest >report/output.log
+
+    - name: Upload test report
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-report
+        path: reports/output.log 

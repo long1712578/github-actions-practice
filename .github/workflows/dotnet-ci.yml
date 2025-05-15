@@ -28,8 +28,17 @@ jobs:
           run: dotnet build --no-restore
           working-directory: GithubActionsPractice
         - name: Run Tests
-          run: dotnet test --no-build --verbosity normal
+          run: |
+            mkdir -p test-results
+            dotnet test --no-build --verbosity normal --logger "trx;LogFileName=test_results.trx"
           working-directory: GithubActionsPractice
+        
+        - name: Upload Test Report
+          uses: actions/upload-artifact@v3
+          with:
+            name: dotnet-test-report
+            path: GithubActionsPractice/**/TestResults/*.trx
+
         - name: Publish
           run: dotnet publish -c Release -o publish
           working-directory: GithubActionsPractice
