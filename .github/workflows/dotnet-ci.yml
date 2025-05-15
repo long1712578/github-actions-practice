@@ -41,7 +41,7 @@ jobs:
           working-directory: GithubActionsPractice
         
         - name: Upload Test Report
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v3.1.3
           with:
             name: dotnet-test-report
             path: GithubActionsPractice/**/TestResults/*.trx
