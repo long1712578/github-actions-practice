@@ -17,6 +17,8 @@
   "bugs": {
     "url": "https://github.com/long1712578/github-actions-practice/issues"
   },
-  "homepage": "https://github.com/long1712578/github-actions-practice#readme"
+  "homepage": "https://github.com/long1712578/github-actions-practice#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
-
