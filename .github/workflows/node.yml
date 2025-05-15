@@ -9,16 +9,16 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout code
+    - name: Checkout code
       uses: actions/checkout@v3
 
-      - name: Setup node.js v16
+    - name: Setup node.js v16
       uses: actions/setup-node@v3
       with: 
         node-version: 16
     
-      - name: Install dependencies
+    - name: Install dependencies
       run: npm install
 
-      - name: Run build
+    - name: Run build
       run: npm run build
