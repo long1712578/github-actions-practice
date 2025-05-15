@@ -35,7 +35,7 @@ jobs:
     - name: Run tests
       run: |
         mkdir -p reports
-        pytest >report/output.log
+        pytest >reports/output.log
 
     - name: Upload test report
       uses: actions/upload-artifact@v4
