@@ -16,12 +16,14 @@ jobs:
       uses: actions/setup-node@v3
       with: 
         node-version: 16
-        cache: 'npm'
-    - name: Cache node_modules
+        cache: npm
+
+
+    - name: Restore node_modules cache
       uses: actions/cache@v3
       with:
         path: node_modules
-        key: ${{runner.os}}-node-v2-${{ hashFiles('**/package-lock.json') }}
+        key: ${{runner.os}}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os}}-node-
 
