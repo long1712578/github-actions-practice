@@ -35,7 +35,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: node_modules
-        key: ${{ runner.os}}-node-${{ hashFile('**/package-lock.json') }}
-        
+        key: ${{ runner.os}}-node-${{ hashFiles('**/package-lock.json') }}
+
     - name: Run build
       run: npm run build
