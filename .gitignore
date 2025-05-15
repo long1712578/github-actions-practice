@@ -48,3 +48,4 @@ lcov*
 
 # Others
 *.swp
+/node_modules
