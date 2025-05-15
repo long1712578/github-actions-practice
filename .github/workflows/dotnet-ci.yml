@@ -11,6 +11,13 @@ jobs:
     build:
         runs-on: ubuntu-latest
 
+        permissions:
+          contents: read
+          actions: read
+          id-token: write
+          packages: read
+          checks: write
+
         steps:
         - name: Checkout code
           uses: actions/checkout@v3

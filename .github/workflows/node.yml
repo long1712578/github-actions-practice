@@ -8,6 +8,13 @@ jobs:
   build:
     runs-on: ubuntu-22.04
 
+    permissions:
+      contents: read
+      actions: read
+      id-token: write
+      packages: read
+      checks: write
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -27,8 +34,8 @@ jobs:
 
     - name: Run tests
       run: |
-      mkdir -p reports
-      pytest >report/output.log
+        mkdir -p reports
+        pytest >report/output.log
 
     - name: Upload test report
       uses: actions/upload-artifact@v3
