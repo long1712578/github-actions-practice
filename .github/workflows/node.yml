@@ -38,7 +38,7 @@ jobs:
     - name: Run tests
       run: |
         mkdir -p reports
-        npx jest --ci --reporters=default --reporters=jest-junit > reports/output.log
+        npx jest --ci --reporters=default --reporters=jest-junit | tee reports/output.log
 
     - name: Upload test report
       uses: actions/upload-artifact@v4
