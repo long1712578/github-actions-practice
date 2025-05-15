@@ -28,6 +28,9 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Install jest-junit
+      run: npm install --save-dev jest-junit
+
 
     - name: Run build
       run: npm run build
@@ -35,7 +38,7 @@ jobs:
     - name: Run tests
       run: |
         mkdir -p reports
-        npx jest --ci --reports=default --reporters=jest-junit > reports/output.log
+        npx jest --ci --reporters=default --reporters=jest-junit > reports/output.log
 
     - name: Upload test report
       uses: actions/upload-artifact@v4
