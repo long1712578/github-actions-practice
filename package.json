@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/long1712578/github-actions-practice#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21" 
   }
 }
