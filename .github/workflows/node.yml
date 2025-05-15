@@ -28,8 +28,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Install jest-junit
-      run: npm install --save-dev jest-junit
+    - name: Install jest-junit and jest
+      run: npm install --save-dev jest jest-junit
 
 
     - name: Run build
